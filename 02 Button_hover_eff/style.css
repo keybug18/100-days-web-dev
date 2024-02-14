@@ -1,0 +1,82 @@
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins";
+
+}
+#wrapper{
+    background-color: #212020;
+    display: flex;
+    min-height: 100vh;
+    justify-content:center;
+    align-items: center;
+}
+#btn{
+    padding: 15px 30px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #292929;
+    border-radius:20px;
+    cursor: pointer;
+    transition: 0.3s;
+    overflow: hidden;
+    box-shadow: 0 2px 10px 0 rgba(0, 0,0,0.137);
+
+}
+#btn span{
+    letter-spacing: 1px;
+    transition: 0.3 s;
+    position: relative;
+    background: inherit;
+}
+#btn:hover{
+    background: #595252;
+}
+#btn:hover span{
+    color: #00ffff;
+
+}
+#btn span::before{
+    position: absolute;
+    background: inherit;
+    content: "";
+}
+#btn:hover span::before{
+ animation: move linear both 1.2s;
+
+}
+
+
+@keyframes move{
+    0%{
+        content: "$";
+    }
+    5%{
+        content: ".*-";
+    }  15%{
+        content: "{.+*/}";
+    }
+    20%{
+        content: "<";
+    }  20%{
+        content: "./";
+    }  40%{
+        content: "*-";
+    }  50%{
+        content: "/-%^@";
+    }  60%{
+        content: "!*(.)@";
+    }  75%{
+        content: "{^.+*/-}";
+    }  85%{
+        content: "!@#){}&*";
+    }  950%{
+        content: "$(&}${";
+    }  100%{
+        content: ".{$)}(";
+    }
+}
